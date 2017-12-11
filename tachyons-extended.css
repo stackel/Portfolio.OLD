@@ -4,17 +4,6 @@
 
 * { box-sizing: border-box; }
 
-/* force scrollbar */
-html { overflow-y: scroll; }
-
-body { font-family: sans-serif; }
-
-/* ---- grid ---- */
-
-.grid {
-  background: #DDD;
-}
-
 /* clear fix */
 .grid:after {
   content: '';
@@ -22,12 +11,13 @@ body { font-family: sans-serif; }
   clear: both;
 }
 
-/* ---- .grid-item ---- */
-
 .grid-sizer,
 .grid-item {
-  width: 33.333%;
+  width: 50%;
 }
+
+.grid-item--wide { width: 100%; }
+.grid-item--narrow { width: 33.33%; }
 
 .grid-item {
   float: left;
@@ -38,3 +28,27 @@ body { font-family: sans-serif; }
   max-width: 100%;
 }
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
